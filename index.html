@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Palette Generator</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Colour Palette Generator</h1>
+
+    <div class="controls">
+        <button id="generate-btn">Generate</button>
+        <button id="save-btn">Save Palette</button>
+        <button id="gradient-btn">Gradient CSS</button>
+        <button id="export-css-btn">Export CSS</button>
+        <button id="download-btn">Download PNG</button>
+        <button id="theme-btn"> Dark Mode</button>
+    </div>
+</header>
+
+<main>
+    <section id="palette" class="palette-container"></section>
+
+    <section class="saved-section">
+        <h2>Saved Palettes</h2>
+        <div id="saved-palettes"></div>
+    </section>
+</main>
+
+<div id="gradient-modal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Gradient CSS</h2>
+        <textarea id="gradient-output" readonly></textarea>
+        <button id="copy-gradient">Copy</button>
+        <button id="close-gradient">Close</button>
+    </div>
+</div>
+
+<div id="css-modal" class="modal hidden">
+    <div class="modal-content">
+        <h2>CSS Variables</h2>
+        <textarea id="css-output" readonly></textarea>
+        <button id="copy-css">Copy</button>
+        <button id="close-css">Close</button>
+    </div>
+</div>
+
+<div id="toast" class="toast">Copied!</div>
+
+<footer>
+<p>
+Space = Generate |
+L = Lock All |
+U = Unlock All |
+C = Copy Palette
+</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
